@@ -1,15 +1,11 @@
-import reactLogo from './assets/react.svg'
-import { Player, Card } from './Types'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactLogo from "./assets/react.svg";
+import { Player, Card } from "./Types";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-
-  const PlayerOne: Player;
-  const PlayerTwo: Player;
-
-
-
+  // const PlayerOne: Player;
+  // const PlayerTwo: Player;
 
   return (
     <>
@@ -31,7 +27,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
