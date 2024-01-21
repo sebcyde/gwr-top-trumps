@@ -1,15 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const rootElement = document.getElementById("root");
+import Loading from "./Pages/Loading.tsx";
+import ReactDOM from "react-dom/client";
+import Menu from "./Pages/Menu.tsx";
+import App from "./App.tsx";
+import React from "react";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Menu />,
+  },
+
+  {
+    path: "/Top-Trumps",
     element: <App />,
+  },
+  {
+    path: "Loading-Game",
+    element: <Loading />,
   },
 ]);
 
