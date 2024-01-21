@@ -10,6 +10,7 @@ function App() {
   const [DealingCards, setDealingCards] = useState<boolean>(true);
   const [Computer, setComputer] = useState<Player>();
   const [Player, setPlayer] = useState<Player>();
+  const [Side, setSide] = useState<Player>();
   const [Turn, setTurn] = useState(true);
   const navigate = useNavigate();
 
@@ -21,22 +22,7 @@ function App() {
     setDealingCards(false);
   }, []);
 
-  // Value Selection Functionality
-  const SelectMetric = (Metric: keyof Card) => {
-    let Result = CompareCards(Player![0], Computer![0], Metric);
-
-    switch (Result) {
-      case "p":
-        PlayerWinRound();
-        break;
-      case "c":
-        PlayerLoseRound();
-        break;
-      default:
-        PlayerDrawRound();
-    }
-  };
-
+  // End game scenario
   const TriggerGameWin = (Result: boolean) => {
     console.log(Result ? "YOU WIN" : "YOU LOSE");
     setTimeout(() => {
@@ -44,35 +30,29 @@ function App() {
     }, 5000);
   };
 
-  const PlayerDrawRound = () => {
-    setDealingCards(true);
-    if (Computer) setComputer(ShuffleCards(Computer));
-    if (Player) setPlayer(ShuffleCards(Player));
-    setDealingCards(false);
-  };
+  // Round Play Functionality
+  const SelectMetric = (Metric: keyof Card) => {
+    // Get Current Playing Cards
+    const ComputerCard: Card = Computer![0];
+    const PlayerCard: Card = Player![0];
 
-  const PlayerWinRound = () => {
-    if (Computer!.length === 1) TriggerGameWin(true);
-    setDealingCards(true);
+    // Compare them based on chosen metric
+    let Result = CompareCards(ComputerCard, PlayerCard, Metric);
 
-    const WonCard: Card = Computer![0];
-    console.log("Won Card:", WonCard);
-
+    // Remove played cards from each hand
     setComputer(Computer!.slice(1));
-    setPlayer([...Player!.slice(1), WonCard]);
-    setDealingCards(false);
-  };
-
-  const PlayerLoseRound = () => {
-    if (Player!.length === 1) TriggerGameWin(false);
-
-    const WonCard: Card = Player![0];
-    console.log("Won Card:", WonCard);
-
-    setDealingCards(true);
     setPlayer(Player!.slice(1));
-    setComputer([...Computer!.slice(1), WonCard]);
-    setDealingCards(false);
+
+    // Add cards to winning hand
+    if (Result == "c") setComputer([...Computer!, PlayerCard, ComputerCard]);
+    if (Result == "p") setPlayer([...Player!, ComputerCard, PlayerCard]);
+
+    // In a draw, set cards to the side for next round
+    if (Result == "d") setSide([...Side!, ComputerCard, PlayerCard]);
+
+    // Check game status
+    if (Computer!.length === 0) TriggerGameWin(true);
+    if (Player!.length === 0) TriggerGameWin(false);
   };
 
   return (
