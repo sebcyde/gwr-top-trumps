@@ -4,19 +4,19 @@ import type { RootState } from "./Store";
 import { UserState } from "../Types";
 
 const initialState: UserState = {
-  userName: "",
+	userName: "",
 };
 
-export const userSlice = createSlice({
-  name: "UserName",
-  initialState,
-  reducers: {
-    setUserName: (state, action: PayloadAction<string>) => {
-      state.userName = action.payload;
-    },
-  },
+export const UserSlice = createSlice({
+	name: "UserName",
+	initialState,
+	reducers: {
+		setUserName: (state, action: PayloadAction<string>) => {
+			state.userName = action.payload;
+		},
+	},
 });
 
-export const { setUserName } = userSlice.actions;
-export const getUserName = (state: RootState) => state.username;
-export default userSlice.reducer;
+export const { setUserName } = UserSlice.actions;
+export const getUserName = (state: RootState) => state.userName;
+export default UserSlice.reducer;

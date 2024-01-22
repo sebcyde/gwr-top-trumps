@@ -1,33 +1,60 @@
-import React, { useState } from "react";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import { setUserName } from "../Store/UserSlice";
+import Logo from "../assets/top_trumps_logo.png";
+import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import { useState } from "react";
 
 const Menu = () => {
-  const [UserName, setUserName] = useState<String>("");
-  const navigate = useNavigate();
+	const [Name, setName] = useState<string>("");
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
-  // GAME SETUP
+	// Set Global UserName in Redux -> UserName
+	const StartGame = async () => {
+		dispatch(setUserName(Name));
+		navigate("/Loading-Game");
+	};
 
-  const StartGame = () => {
-    // Set Store UserName Reducer HERE -> UserName
-    navigate("/Loading-Game");
-  };
+	return (
+		<div className="MenuContainer">
+			<Card sx={{ minWidth: 275 }} className="Menu">
+				<CardContent>
+					<div className="LogoContainer">
+						<img src={Logo} />
+					</div>
 
-  return (
-    <div className="MenuContainer">
-      <h2>Welcome to Top Trumps</h2>
-      <input
-        value={UserName.toString()}
-        onChange={(e) => {
-          e.preventDefault();
-          console.log("Input Value: ", e.target.value.toString());
-          setUserName(e.target.value.toString());
-        }}
-        type="text"
-        placeholder="Username..."
-      />
-      <button onClick={StartGame}>PLAY!</button>
-    </div>
-  );
+					<Box
+						component="form"
+						sx={{
+							"& > :not(style)": { m: 1, width: "25ch" },
+						}}
+						noValidate
+						autoComplete="off"
+					>
+						<TextField
+							id="outlined-controlled"
+							label="Enter Username..."
+							value={Name}
+							onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+								setName(event.target.value);
+							}}
+						/>
+					</Box>
+				</CardContent>
+				<CardActions>
+					<Button variant="contained" onClick={StartGame}>
+						PLAY!
+					</Button>
+				</CardActions>
+			</Card>
+		</div>
+	);
 };
 
 export default Menu;

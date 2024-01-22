@@ -1,0 +1,121 @@
+// .MainScreen {
+// 	height: fit-content;
+
+// 	.DealingScreen {
+// 		/* Displayed while cards are being dealt */
+// 		justify-content: center;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		height: fit-content;
+// 		text-align: center;
+// 		display: flex;
+// 		width: 100vw;
+// 	}
+
+// 	.GameBoard {
+// 		/* Game Container */
+// 		justify-content: space-evenly;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		height: fit-content;
+// 		display: flex;
+// 		width: 100vw;
+
+// 		> div {
+// 			justify-content: space-evenly;
+// 			height: fit-content;
+// 			width: 100%;
+// 		}
+
+// 		.ComputerSide {
+// 			/* Row of back of card images */
+// 			flex-direction: row-reverse;
+// 			align-items: center;
+// 			height: fit-content;
+// 			position: relative;
+// 			padding: 20px 0px;
+// 			display: flex;
+
+// 			border: 1px solid green;
+
+// 			img {
+// 				/* LOGO */
+// 				position: absolute;
+// 				height: 80px;
+// 			}
+
+// 			.Card_Back.Card {
+// 				background-color: #17141d !important;
+// 				box-shadow: -1rem 0 3rem #000;
+// 				justify-content: center;
+// 				border-radius: 10px;
+// 				align-items: center;
+// 				position: relative;
+// 				display: flex;
+// 				height: 180px;
+// 				width: 120px;
+// 				left: 0px;
+// 			}
+// 		}
+
+// 		.PlayerSide {
+// 			border: 1px solid red;
+
+// 			justify-content: center;
+// 			height: fit-content;
+// 			position: relative;
+// 			padding: 20px 0px;
+// 			display: flex;
+
+// 			.Cards {
+// 				justify-content: center;
+
+// 				width: 40%;
+// 				position: relative;
+// 				height: 340px;
+
+// 				.Card {
+// 					flex-direction: column;
+// 					position: absolute;
+// 					padding: 20px;
+// 					display: flex;
+
+// 					h3,
+// 					h4 {
+// 						margin: 0px;
+// 					}
+
+// 					h4 {
+// 						margin-bottom: 20px;
+// 					}
+
+// 					p {
+// 						text-transform: uppercase;
+// 						&:hover {
+// 							color: yellow;
+// 							cursor: pointer;
+// 						}
+// 					}
+// 				}
+// 			}
+
+// 			.UserStats {
+// 				width: fit-content;
+// 			}
+// 		}
+
+// 		.Card {
+// 			background-color: brown;
+// 			border-radius: 10px;
+// 			height: 300px;
+// 			width: 200px;
+
+// 			p {
+// 				margin: 0px;
+// 			}
+// 		}
+
+// 		.SelectedCardsContainer {
+// 		}
+// 	}
+// }
