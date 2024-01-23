@@ -14,7 +14,9 @@ export const GameRecordSlice = createSlice({
 	initialState,
 	reducers: {
 		setGameRecords: (state, action: PayloadAction<GameRecordState>) => {
-			state = action.payload;
+			state.GamesPlayed = action.payload.GamesPlayed;
+			state.GamesLost = action.payload.GamesLost;
+			state.GamesWon = action.payload.GamesWon;
 		},
 	},
 });

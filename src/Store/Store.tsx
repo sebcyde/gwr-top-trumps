@@ -1,11 +1,13 @@
+import { AttributeSlice } from "./AttributeSlice";
 import { configureStore } from "@reduxjs/toolkit";
-import { setGameRecords, GameRecordSlice } from "./GameSlice";
-import { setUserName, UserSlice } from "./UserSlice";
+import { GameRecordSlice } from "./GameSlice";
+import { UserSlice } from "./UserSlice";
 
 export const store = configureStore({
 	reducer: {
 		gameRecord: GameRecordSlice.reducer,
 		userName: UserSlice.reducer,
+		chosenAttribute: AttributeSlice.reducer,
 	},
 });
 

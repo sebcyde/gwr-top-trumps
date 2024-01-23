@@ -1,121 +1,88 @@
-// .MainScreen {
-// 	height: fit-content;
+.GameBoard {
+	display: flex;
+	> div {
+		justify-content: space-evenly;
+		flex-direction: column;
+		padding: 0px 50px;
+		margin: 0 auto;
+		display: flex;
+		width: 70%;
 
-// 	.DealingScreen {
-// 		/* Displayed while cards are being dealt */
-// 		justify-content: center;
-// 		flex-direction: column;
-// 		align-items: center;
-// 		height: fit-content;
-// 		text-align: center;
-// 		display: flex;
-// 		width: 100vw;
-// 	}
+		&.ComputerSide {
+			border-right: 1px solid red;
+		}
 
-// 	.GameBoard {
-// 		/* Game Container */
-// 		justify-content: space-evenly;
-// 		flex-direction: column;
-// 		align-items: center;
-// 		height: fit-content;
-// 		display: flex;
-// 		width: 100vw;
+		&.PlayerSide {
+			border-left: 1px solid red;
+		}
 
-// 		> div {
-// 			justify-content: space-evenly;
-// 			height: fit-content;
-// 			width: 100%;
-// 		}
+		.Menu {
+			background-color: $PrimaryColour;
+			border-radius: 5px;
+			color: white;
+		}
+	}
+}
 
-// 		.ComputerSide {
-// 			/* Row of back of card images */
-// 			flex-direction: row-reverse;
-// 			align-items: center;
-// 			height: fit-content;
-// 			position: relative;
-// 			padding: 20px 0px;
-// 			display: flex;
+.StatusBoard {
+	background-color: $PrimaryColour;
+	margin: 0 auto 20px;
+	border-radius: 5px;
+	padding: 10px 20px;
+	color: white;
+	width: 50%;
+	p {
+		margin: 0px;
+	}
+}
 
-// 			border: 1px solid green;
+@media only screen and (max-width: 600px) {
+	.GameBoard {
+		flex-direction: column;
 
-// 			img {
-// 				/* LOGO */
-// 				position: absolute;
-// 				height: 80px;
-// 			}
+		> div {
+			border: none !important;
+			align-items: center;
+			padding: 0px;
+			padding-top: 20px;
+			margin: 0px;
+			width: 100%;
 
-// 			.Card_Back.Card {
-// 				background-color: #17141d !important;
-// 				box-shadow: -1rem 0 3rem #000;
-// 				justify-content: center;
-// 				border-radius: 10px;
-// 				align-items: center;
-// 				position: relative;
-// 				display: flex;
-// 				height: 180px;
-// 				width: 120px;
-// 				left: 0px;
-// 			}
-// 		}
+			.Menu {
+				.MuiCardContent-root {
+					padding: 5px;
+					p {
+						font-size: 0.8em;
+					}
+				}
+			}
 
-// 		.PlayerSide {
-// 			border: 1px solid red;
+			.card {
+				height: 200px;
+				margin: 10px;
+				width: 150px;
+			}
+		}
 
-// 			justify-content: center;
-// 			height: fit-content;
-// 			position: relative;
-// 			padding: 20px 0px;
-// 			display: flex;
+		.ComputerSide {
+			padding: 0px;
+			.card {
+				display: none;
+			}
+		}
 
-// 			.Cards {
-// 				justify-content: center;
+		.PlayerSide {
+			flex-direction: column-reverse;
+			.card {
+				margin-bottom: 40px;
+				height: 400px;
+				width: 250px;
+			}
+		}
+	}
 
-// 				width: 40%;
-// 				position: relative;
-// 				height: 340px;
-
-// 				.Card {
-// 					flex-direction: column;
-// 					position: absolute;
-// 					padding: 20px;
-// 					display: flex;
-
-// 					h3,
-// 					h4 {
-// 						margin: 0px;
-// 					}
-
-// 					h4 {
-// 						margin-bottom: 20px;
-// 					}
-
-// 					p {
-// 						text-transform: uppercase;
-// 						&:hover {
-// 							color: yellow;
-// 							cursor: pointer;
-// 						}
-// 					}
-// 				}
-// 			}
-
-// 			.UserStats {
-// 				width: fit-content;
-// 			}
-// 		}
-
-// 		.Card {
-// 			background-color: brown;
-// 			border-radius: 10px;
-// 			height: 300px;
-// 			width: 200px;
-
-// 			p {
-// 				margin: 0px;
-// 			}
-// 		}
-
-// 		.SelectedCardsContainer {
-// 		}
-// 	}
-// }
+	.StatusBoard {
+		font-size: 0.8em;
+		width: 100%;
+	}
+}

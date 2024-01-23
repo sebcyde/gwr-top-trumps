@@ -7,7 +7,7 @@ const Loading = () => {
 
 	useEffect(() => {
 		// Navigation - Simulating loading of game data etc
-		const NavigateToGame = setTimeout(() => navigate("/Top-Trumps"), 3000);
+		const NavigateToGame = setTimeout(() => navigate("/Top-Trumps"), 2000);
 
 		// Clear timeouts to prevent memory leaks
 		return () => {
