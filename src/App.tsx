@@ -95,7 +95,7 @@ function App() {
 		);
 
 		setTimeout(() => {
-			navigate("/");
+			navigate("/gwr-top-trumps");
 		}, 1000);
 	};
 

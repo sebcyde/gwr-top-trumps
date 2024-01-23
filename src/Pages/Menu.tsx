@@ -22,7 +22,7 @@ const Menu = () => {
 	// Set Global UserName in Redux -> UserName
 	const StartGame = async () => {
 		dispatch(setUserName(Name));
-		navigate("/loading");
+		navigate("/gwr-top-trumps/loading");
 	};
 
 	return (

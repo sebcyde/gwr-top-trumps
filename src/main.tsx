@@ -12,15 +12,15 @@ import "./index.css";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "/gwr-top-trumps",
 		element: <Menu />,
 	},
 	{
-		path: "/top-trumps",
+		path: "/gwr-top-trumps/top-trumps",
 		element: <App />,
 	},
 	{
-		path: "/loading",
+		path: "/gwr-top-trumps/loading",
 		element: <Loading />,
 	},
 ]);
