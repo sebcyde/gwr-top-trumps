@@ -15,13 +15,12 @@ const router = createBrowserRouter([
 		path: "/",
 		element: <Menu />,
 	},
-
 	{
-		path: "/Top-Trumps",
+		path: "/top-trumps",
 		element: <App />,
 	},
 	{
-		path: "Loading-Game",
+		path: "/loading",
 		element: <Loading />,
 	},
 ]);

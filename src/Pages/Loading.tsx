@@ -1,14 +1,13 @@
 import BarLoader from "react-spinners/BarLoader";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import React from "react";
 
 const Loading = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
 		// Navigation - Simulating loading of game data etc
-		const NavigateToGame = setTimeout(() => navigate("/Top-Trumps"), 2000);
+		const NavigateToGame = setTimeout(() => navigate("/top-trumps"), 2000);
 
 		// Clear timeouts to prevent memory leaks
 		return () => {
