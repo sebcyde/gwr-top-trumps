@@ -3,11 +3,12 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+  "homepage": "https://https://sebcyde.github.io/gwr-top-trumps//",
 	"scripts": {
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist",
 		"dev": "vite",
-		"build": "tsc && vite build",
+		"build": "tsc && vite build --base=./",
 		"preview": "vite preview"
 	},
 	"dependencies": {
