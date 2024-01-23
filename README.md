@@ -40,3 +40,15 @@ Welcome to the Top Trumps application!.
    ```bash
    git clone https://github.com/sebcyde/gwr-top-trumps.git
    ```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run aplication:
+
+```bash
+npm run dev
+```
