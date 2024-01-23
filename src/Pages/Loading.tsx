@@ -1,6 +1,7 @@
 import BarLoader from "react-spinners/BarLoader";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import React from "react";
 
 const Loading = () => {
 	const navigate = useNavigate();

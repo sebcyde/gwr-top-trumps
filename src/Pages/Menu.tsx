@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import { useState } from "react";
+import React from "react";
 
 const Menu = () => {
 	const GameRecord = useSelector((state: RootState) => state.gameRecord);

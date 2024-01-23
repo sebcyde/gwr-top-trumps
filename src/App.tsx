@@ -11,6 +11,7 @@ import CardComponent from "./Components/Card";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Player, Card } from "./Types";
+import React from "react";
 import "./App.css";
 
 function App() {
