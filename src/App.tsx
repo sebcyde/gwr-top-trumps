@@ -85,7 +85,7 @@ function App() {
 	const TriggerGameWin = (Result: boolean) => {
 		// True Result = player win, false = computer win
 		setGameOver(true);
-		setStatus(Result ? "YOU WIN" : "YOU LOSE");
+		alert(Result ? "YOU WIN" : "YOU LOSE");
 		dispatch(
 			setGameRecords({
 				GamesPlayed: GameRecord.GamesPlayed + 1,
@@ -96,7 +96,7 @@ function App() {
 
 		setTimeout(() => {
 			navigate("/");
-		}, 2000);
+		}, 1000);
 	};
 
 	// Round Play Functionality

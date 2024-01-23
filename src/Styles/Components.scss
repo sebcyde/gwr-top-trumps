@@ -32,6 +32,11 @@
 	background-color: antiquewhite;
 	color: black;
 	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	overflow: hidden;
 }
 
 .back {
@@ -58,7 +63,9 @@
 
 .card_picture {
 	overflow: hidden;
-	width: 80%;
+	height: 140px;
+	width: auto;
+	margin-bottom: 20px;
 }
 
 .CardInformationContainer {

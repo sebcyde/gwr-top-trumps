@@ -22,10 +22,7 @@ const CardComponent = ({ PlayerTurn, Card }: Props) => {
 				<p className="card_name">{Card.name}</p>
 				<p className="card_country">{Card.country}</p>
 
-				<img
-					className="card_picture"
-					src="https://www.seeklogo.net/wp-content/uploads/2011/06/facebook-icon-logo-vector.png"
-				/>
+				<img className="card_picture" src={Card.image_url} />
 
 				<div className="CardInformationContainer">
 					<span
