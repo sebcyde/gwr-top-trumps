@@ -16,7 +16,12 @@ Welcome to the Top Trumps application!.
 
 ## Getting Started
 
-[Instructions on how to get a copy of the project up and running on a local machine.]
+### Rules
+
+- **Record** The record, higher number wins.
+- **Attempts** Amount of times record was attempted, lower number wins.
+- **Times Broken** Amount of times the record has been broken, lower number wins.
+- **Year** The year the record was set, earlier year wins.
 
 ### Dependencies
 
@@ -37,9 +42,9 @@ Welcome to the Top Trumps application!.
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/sebcyde/gwr-top-trumps.git
-   ```
+```bash
+git clone https://github.com/sebcyde/gwr-top-trumps.git
+```
 
 2. Install dependencies:
 
