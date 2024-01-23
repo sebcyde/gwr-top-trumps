@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const rootElement = document.getElementById("root");
 import Loading from "./Pages/Loading.tsx";
-import { store } from "./Store/Store.tsx";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import Menu from "./Pages/Menu.tsx";
+import { store } from "./store";
 import App from "./App.tsx";
 import "./Styles/All.scss";
 import React from "react";
@@ -26,13 +26,10 @@ const router = createBrowserRouter([
 	},
 ]);
 
-// new
-if (rootElement) {
-	ReactDOM.createRoot(rootElement).render(
-		<React.StrictMode>
-			<Provider store={store}>
-				<RouterProvider router={router} />
-			</Provider>
-		</React.StrictMode>
-	);
-}
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+	<React.StrictMode>
+		<Provider store={store}>
+			<RouterProvider router={router} />
+		</Provider>
+	</React.StrictMode>
+);
