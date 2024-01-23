@@ -100,17 +100,10 @@ function App() {
 	};
 
 	// Round Play Functionality
-	const SelectMetric = (Metric: keyof Card) => {
+	const SelectMetric = (Metric: any) => {
 		// Get Current Playing Cards
 		const ComputerCard: Card = Computer![0];
 		const PlayerCard: Card = Player![0];
-
-		// DEBUG
-		console.log("Metric:", Metric);
-		console.log("ComputerCard:", ComputerCard);
-		console.log("PlayerCard:", PlayerCard);
-		console.log("Computer Value:", ComputerCard[Metric]);
-		console.log("Player Value:", PlayerCard[Metric]);
 
 		// Compare them based on chosen metric
 		let Result = CompareCards(PlayerCard, ComputerCard, Metric);

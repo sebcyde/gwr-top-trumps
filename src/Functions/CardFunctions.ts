@@ -1,6 +1,5 @@
 import Data from "../../world_records_sample.json";
 import { Card } from "../Types";
-import axios from "axios";
 
 // Create the initial deck with all cards
 export const CreateDeck = (): Card[][] => {

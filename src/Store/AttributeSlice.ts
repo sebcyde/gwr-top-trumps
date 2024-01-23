@@ -9,7 +9,7 @@ export const AttributeSlice = createSlice({
 	name: "ChosenAttribute",
 	initialState,
 	reducers: {
-		setAttribute: (state, action: PayloadAction<keyof Card | string>) => {
+		setAttribute: (_state, action: PayloadAction<keyof Card | string>) => {
 			return action.payload;
 		},
 	},

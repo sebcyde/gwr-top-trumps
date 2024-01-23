@@ -1,8 +1,4 @@
-import { Card, Player } from "../Types";
-
-const StartGame = () => {
-	const Players: Player[] = [];
-};
+import { Card } from "../Types";
 
 export const CompareCards = (
 	PlayerCard: Card,

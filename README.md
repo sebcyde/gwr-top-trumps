@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# GWR Top-Trumps Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Top Trumps application!.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React (TypeScript):** The core of our application, providing a robust and efficient user interface.
 
-## Expanding the ESLint configuration
+- **Redux:** State management to ensure a predictable and scalable state container.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React Router:** Navigation in a single-page application, enabling a smooth user experience.
 
-- Configure the top-level `parserOptions` property like this:
+- **Sass:** A CSS extension language for styling, making our application visually appealing and maintainable.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- **Material-UI:** A popular React UI framework for a consistent and responsive design.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started
+
+[Instructions on how to get a copy of the project up and running on a local machine.]
+
+### Dependencies
+
+- **@emotion/react:** ^11.11.3
+- **@emotion/styled:** ^11.11.0
+- **@mui/icons-material:** ^5.15.6
+- **@mui/material:** ^5.15.6
+- **@reduxjs/toolkit:** ^2.0.1
+- **axios:** ^1.6.5
+- **react:** ^18.2.0
+- **react-dom:** ^18.2.0
+- **react-redux:** ^9.1.0
+- **react-router-dom:** ^6.21.3
+- **react-spinners:** ^0.13.8
+- **sass:** ^1.70.0
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sebcyde/gwr-top-trumps.git
+   ```
